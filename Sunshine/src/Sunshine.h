@@ -5,6 +5,7 @@
 
 #include "Sunshine/Application.h"
 #include "Sunshine/Core.h"
+#include "Sunshine/Log.h"
 //#include <stdio.h>
 
 // --- Entry Point ---------------------------------------

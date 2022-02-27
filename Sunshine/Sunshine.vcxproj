@@ -11,12 +11,14 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Sunshine\Log.h" />
     <ClInclude Include="src\Sunshine.h" />
     <ClInclude Include="src\Sunshine\Application.h" />
     <ClInclude Include="src\Sunshine\Core.h" />
     <ClInclude Include="src\Sunshine\EntryPoint.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Sunshine\Log.cpp" />
     <ClCompile Include="src\Sunshine\Application.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -71,6 +73,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>SU_PLATFORM_WINDOWS;SU_BUILD_DLL;_WINDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)\Sunshine\vendor\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -85,6 +88,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>SU_PLATFORM_WINDOWS;SU_BUILD_DLL;_WINDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)\Sunshine\vendor\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

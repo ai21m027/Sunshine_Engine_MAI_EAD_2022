@@ -1,0 +1,3 @@
+[submodule "Sunshine/vendor/spdlog"]
+	path = Sunshine/vendor/spdlog
+	url = https://github.com/gabime/spdlog
