@@ -147,6 +147,10 @@
     <ClInclude Include="src\Sunshine\Application.h" />
     <ClInclude Include="src\Sunshine\Core.h" />
     <ClInclude Include="src\Sunshine\EntryPoint.h" />
+    <ClInclude Include="src\Sunshine\Events\ApplicationEvent.h" />
+    <ClInclude Include="src\Sunshine\Events\Event.h" />
+    <ClInclude Include="src\Sunshine\Events\KeyEvent.h" />
+    <ClInclude Include="src\Sunshine\Events\MouseEvent.h" />
     <ClInclude Include="src\Sunshine\Log.h" />
   </ItemGroup>
   <ItemGroup>

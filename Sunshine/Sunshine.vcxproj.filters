@@ -19,6 +19,10 @@
     <ClInclude Include="src\Sunshine\Log.h">
       <Filter>Sunshine</Filter>
     </ClInclude>
+    <ClInclude Include="src\Sunshine\Events\ApplicationEvent.h" />
+    <ClInclude Include="src\Sunshine\Events\Event.h" />
+    <ClInclude Include="src\Sunshine\Events\KeyEvent.h" />
+    <ClInclude Include="src\Sunshine\Events\MouseEvent.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Sunshine\Application.cpp">
