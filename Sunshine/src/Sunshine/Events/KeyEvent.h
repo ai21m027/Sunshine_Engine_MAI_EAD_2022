@@ -1,8 +1,7 @@
 #pragma once
-
+#include "supch.h"
 #include "Event.h"
 
-#include <sstream>
 
 namespace Sunshine {
 

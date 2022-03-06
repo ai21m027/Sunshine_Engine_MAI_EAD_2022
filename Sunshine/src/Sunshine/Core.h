@@ -1,5 +1,6 @@
 #pragma once
 
+
 #ifdef SU_PLATFORM_WINDOWS
 	#ifdef SU_BUILD_DLL
 		#define SUNSHINE_API __declspec(dllexport)

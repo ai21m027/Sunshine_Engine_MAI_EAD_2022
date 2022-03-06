@@ -1,3 +1,4 @@
+#include "supch.h"
 #include "Application.h"
 
 #include "Sunshine/Events/ApplicationEvent.h"
@@ -19,11 +20,11 @@ namespace Sunshine {
 		WindowResizeEvent e(1280, 720);
 		if(e.IsInCategory(EventCategoryApplication))
 		{
-			SU_CORE_TRACE(e);
+			SU_TRACE(e);
 		}
 		if (e.IsInCategory(EventCategoryInput))
 		{
-			SU_CORE_TRACE(e);
+			SU_TRACE(e);
 		}
 
 

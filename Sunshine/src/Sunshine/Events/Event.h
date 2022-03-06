@@ -1,9 +1,7 @@
 #pragma once
 
+#include "supch.h"
 #include "Sunshine/Core.h"
-
-#include <string>
-#include <functional>
 
 namespace Sunshine {
 

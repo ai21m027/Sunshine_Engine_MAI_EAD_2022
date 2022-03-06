@@ -18,6 +18,9 @@ project "Sunshine"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 	
+	pchheader "supch.h"
+	pchsource "Sunshine/src/supch.cpp"
+	
 	files
 	{
 		"%{prj.name}/src/**.h",
