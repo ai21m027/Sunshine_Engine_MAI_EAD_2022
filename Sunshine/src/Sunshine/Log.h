@@ -1,9 +1,12 @@
 #pragma once
 
+#include <memory>
+
 #include "Core.h"
 #include "spdlog/spdlog.h"
 #include "spdlog/sinks/stdout_color_sinks.h"
-#include <memory>
+#include "spdlog/fmt/ostr.h"
+
 
 namespace Sunshine
 {
@@ -26,6 +29,7 @@ namespace Sunshine
 #define SU_CORE_WARN(...)    ::Sunshine::Log::GetCoreLogger()->warn(__VA_ARGS__)
 #define SU_CORE_INFO(...)    ::Sunshine::Log::GetCoreLogger()->info(__VA_ARGS__)
 #define SU_CORE_TRACE(...)   ::Sunshine::Log::GetCoreLogger()->trace(__VA_ARGS__)
+
 //fatal does not exist
 //#define SU_CORE_FATAL(...)   ::Sunshine::Log::GetCoreLogger()->fatal(__VA_ARGS__)
 
@@ -34,5 +38,6 @@ namespace Sunshine
 #define SU_WARN(...)         ::Sunshine::Log::GetClientLogger()->warn(__VA_ARGS__)
 #define SU_INFO(...)         ::Sunshine::Log::GetClientLogger()->info(__VA_ARGS__)
 #define SU_TRACE(...)        ::Sunshine::Log::GetClientLogger()->trace(__VA_ARGS__)
+
 //fatal does not exist
 //#define SU_FATAL(...)        ::Sunshine::Log::GetClientLogger()->fatal(__VA_ARGS__)

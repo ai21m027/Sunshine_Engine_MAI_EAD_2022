@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../Core.h"
+#include "Sunshine/Core.h"
 
 #include <string>
 #include <functional>
@@ -77,4 +77,8 @@ namespace Sunshine {
 		Event& m_Event;
 	};
 
+	inline std::ostream& operator<<(std::ostream& os, const Event& e)
+	{
+		return os << e.ToString();
+	}
 }

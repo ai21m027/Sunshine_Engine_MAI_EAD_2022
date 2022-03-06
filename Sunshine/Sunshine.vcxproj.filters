@@ -4,6 +4,9 @@
     <Filter Include="Sunshine">
       <UniqueIdentifier>{F25E5C4C-DE2B-B757-0745-A5FFF370ECE5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Sunshine\Events">
+      <UniqueIdentifier>{9686B79A-0212-255F-0B23-A853772D815F}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Sunshine.h" />
@@ -16,13 +19,21 @@
     <ClInclude Include="src\Sunshine\EntryPoint.h">
       <Filter>Sunshine</Filter>
     </ClInclude>
+    <ClInclude Include="src\Sunshine\Events\ApplicationEvent.h">
+      <Filter>Sunshine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Sunshine\Events\Event.h">
+      <Filter>Sunshine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Sunshine\Events\KeyEvent.h">
+      <Filter>Sunshine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Sunshine\Events\MouseEvent.h">
+      <Filter>Sunshine\Events</Filter>
+    </ClInclude>
     <ClInclude Include="src\Sunshine\Log.h">
       <Filter>Sunshine</Filter>
     </ClInclude>
-    <ClInclude Include="src\Sunshine\Events\ApplicationEvent.h" />
-    <ClInclude Include="src\Sunshine\Events\Event.h" />
-    <ClInclude Include="src\Sunshine\Events\KeyEvent.h" />
-    <ClInclude Include="src\Sunshine\Events\MouseEvent.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Sunshine\Application.cpp">
