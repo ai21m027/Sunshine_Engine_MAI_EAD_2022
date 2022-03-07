@@ -1,3 +1,5 @@
+--result needs to be multithreaded dll -> staticruntime "Off"
+
 workspace "Sunshine"
 	architecture "x64"
 	
@@ -10,6 +12,12 @@ workspace "Sunshine"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+-- Include directories relative to root folder (solution directory)
+IncludeDir = {}
+IncludeDir["GLFW"] = "Sunshine/vendor/GLFW/include"
+
+include "Sunshine/vendor/GLFW"
+
 project "Sunshine"
 	location "Sunshine"
 	kind "SharedLib"
@@ -18,6 +26,7 @@ project "Sunshine"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 	
+	--Pre compiled header configurations, pchsource needed for VS2019
 	pchheader "supch.h"
 	pchsource "Sunshine/src/supch.cpp"
 	
@@ -30,12 +39,19 @@ project "Sunshine"
 	includedirs
 	{
 		"%{prj.name}/src",
-		"%{prj.name}/vendor/spdlog/include"
+		"%{prj.name}/vendor/spdlog/include",
+		"%{IncludeDir.GLFW}"
+	}
+	
+	links
+	{
+		"GLFW",
+		"opengl32.lib"
 	}
 	
 	filter "system:windows"
 		cppdialect "C++17"
-		staticruntime "On"
+		staticruntime "Off"
 		systemversion "latest"
 		
 		defines{
@@ -86,7 +102,7 @@ project "Sandbox"
 	
 	filter "system:windows"
 		cppdialect "C++17"
-		staticruntime "On"
+		staticruntime "Off"
 		systemversion "latest"
 		
 		defines{

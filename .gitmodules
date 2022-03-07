@@ -1,3 +1,6 @@
 [submodule "Sunshine/vendor/spdlog"]
 	path = Sunshine/vendor/spdlog
 	url = https://github.com/gabime/spdlog
+[submodule "Sunshine/vendor/GLFW"]
+	path = Sunshine/vendor/GLFW
+	url = https://github.com/TheCherno/GLFW

@@ -7,6 +7,12 @@
     <Filter Include="Sunshine\Events">
       <UniqueIdentifier>{9686B79A-0212-255F-0B23-A853772D815F}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Sunshine\Platform">
+      <UniqueIdentifier>{868BD142-F2A1-CFD8-3B19-5BFAA76EA060}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sunshine\Platform\Windows">
+      <UniqueIdentifier>{C05B5D94-2C1E-911E-75CE-1FABE1CF69FC}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Sunshine.h" />
@@ -34,6 +40,12 @@
     <ClInclude Include="src\Sunshine\Log.h">
       <Filter>Sunshine</Filter>
     </ClInclude>
+    <ClInclude Include="src\Sunshine\Platform\Windows\WindowsWindow.h">
+      <Filter>Sunshine\Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Sunshine\Window.h">
+      <Filter>Sunshine</Filter>
+    </ClInclude>
     <ClInclude Include="src\supch.h" />
   </ItemGroup>
   <ItemGroup>
@@ -42,6 +54,9 @@
     </ClCompile>
     <ClCompile Include="src\Sunshine\Log.cpp">
       <Filter>Sunshine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Sunshine\Platform\Windows\WindowsWindow.cpp">
+      <Filter>Sunshine\Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\supch.cpp" />
   </ItemGroup>

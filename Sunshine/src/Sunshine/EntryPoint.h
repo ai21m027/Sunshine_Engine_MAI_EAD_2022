@@ -8,10 +8,10 @@ extern Sunshine::Application* Sunshine::CreateApplication();
 int main(int argc,char** argv)
 {
 	Sunshine::Log::Init();
-	SU_CORE_INFO("Initialized the Core Logger");
-	SU_INFO("Initialized the Client Logger");
+	//SU_CORE_INFO("Initialized the Core Logger");
+	//SU_INFO("Initialized the Client Logger");
 
-	//printf("Sunshine Engine started\n");
+	printf("Sunshine Engine started\n");
 	auto app = Sunshine::CreateApplication();
 	app->Run();
 	delete app;
