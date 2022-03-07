@@ -16,7 +16,7 @@ int main(int argc,char** argv)
 	app->Run();
 	delete app;
 }
-#else
+#else-
 	#error Sunshine only supports Windows
 #endif
 
