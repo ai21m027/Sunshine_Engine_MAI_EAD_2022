@@ -37,6 +37,12 @@
     <ClInclude Include="src\Sunshine\Events\MouseEvent.h">
       <Filter>Sunshine\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Sunshine\Layer.h">
+      <Filter>Sunshine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Sunshine\LayerStack.h">
+      <Filter>Sunshine</Filter>
+    </ClInclude>
     <ClInclude Include="src\Sunshine\Log.h">
       <Filter>Sunshine</Filter>
     </ClInclude>
@@ -50,6 +56,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Sunshine\Application.cpp">
+      <Filter>Sunshine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Sunshine\Layer.cpp">
+      <Filter>Sunshine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Sunshine\LayerStack.cpp">
       <Filter>Sunshine</Filter>
     </ClCompile>
     <ClCompile Include="src\Sunshine\Log.cpp">

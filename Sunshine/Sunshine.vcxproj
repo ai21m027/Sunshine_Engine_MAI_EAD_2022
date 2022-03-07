@@ -83,7 +83,8 @@
       <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
-      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalOptions>/MDd %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -108,7 +109,8 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
-      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalOptions>/MD %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -134,7 +136,8 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
-      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalOptions>/MD %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -157,6 +160,8 @@
     <ClInclude Include="src\Sunshine\Events\Event.h" />
     <ClInclude Include="src\Sunshine\Events\KeyEvent.h" />
     <ClInclude Include="src\Sunshine\Events\MouseEvent.h" />
+    <ClInclude Include="src\Sunshine\Layer.h" />
+    <ClInclude Include="src\Sunshine\LayerStack.h" />
     <ClInclude Include="src\Sunshine\Log.h" />
     <ClInclude Include="src\Sunshine\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\Sunshine\Window.h" />
@@ -164,6 +169,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Sunshine\Application.cpp" />
+    <ClCompile Include="src\Sunshine\Layer.cpp" />
+    <ClCompile Include="src\Sunshine\LayerStack.cpp" />
     <ClCompile Include="src\Sunshine\Log.cpp" />
     <ClCompile Include="src\Sunshine\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\supch.cpp">
