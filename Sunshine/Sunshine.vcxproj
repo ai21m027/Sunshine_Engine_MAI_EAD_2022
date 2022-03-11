@@ -80,7 +80,7 @@
       <PrecompiledHeaderFile>supch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>SU_PLATFORM_WINDOWS;SU_BUILD_DLL;GLFW_INCLUDE_NONE;SU_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;vendor\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -103,7 +103,7 @@
       <PrecompiledHeaderFile>supch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>SU_PLATFORM_WINDOWS;SU_BUILD_DLL;GLFW_INCLUDE_NONE;SU_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;vendor\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -130,7 +130,7 @@
       <PrecompiledHeaderFile>supch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>SU_PLATFORM_WINDOWS;SU_BUILD_DLL;GLFW_INCLUDE_NONE;SU_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;vendor\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -160,18 +160,23 @@
     <ClInclude Include="src\Sunshine\Events\Event.h" />
     <ClInclude Include="src\Sunshine\Events\KeyEvent.h" />
     <ClInclude Include="src\Sunshine\Events\MouseEvent.h" />
+    <ClInclude Include="src\Sunshine\ImGui\ImGuiLayer.h" />
     <ClInclude Include="src\Sunshine\Layer.h" />
     <ClInclude Include="src\Sunshine\LayerStack.h" />
     <ClInclude Include="src\Sunshine\Log.h" />
+    <ClInclude Include="src\Sunshine\Platform\OpenGL\ImGuiOpenGLRenderer.h" />
+    <ClInclude Include="src\Sunshine\Platform\OpenGL\imgui_impl_opengl3_loader.h" />
     <ClInclude Include="src\Sunshine\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\Sunshine\Window.h" />
     <ClInclude Include="src\supch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Sunshine\Application.cpp" />
+    <ClCompile Include="src\Sunshine\ImGui\ImGuiLayer.cpp" />
     <ClCompile Include="src\Sunshine\Layer.cpp" />
     <ClCompile Include="src\Sunshine\LayerStack.cpp" />
     <ClCompile Include="src\Sunshine\Log.cpp" />
+    <ClCompile Include="src\Sunshine\Platform\OpenGL\ImGuiOpenGLRenderer.cpp" />
     <ClCompile Include="src\Sunshine\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\supch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
@@ -183,6 +188,9 @@
     </ProjectReference>
     <ProjectReference Include="vendor\Glad\Glad.vcxproj">
       <Project>{BDD6857C-A90D-870D-52FA-6C103E10030F}</Project>
+    </ProjectReference>
+    <ProjectReference Include="vendor\imgui\ImGui.vcxproj">
+      <Project>{C0FF640D-2C14-8DBE-F595-301E616989EF}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

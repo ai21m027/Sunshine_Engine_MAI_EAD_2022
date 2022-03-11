@@ -15,9 +15,11 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 IncludeDir = {}
 IncludeDir["GLFW"] = "Sunshine/vendor/GLFW/include"
 IncludeDir["Glad"] = "Sunshine/vendor/Glad/include"
+IncludeDir["ImGui"] = "Sunshine/vendor/imgui"
 
 include "Sunshine/vendor/GLFW"
 include "Sunshine/vendor/Glad"
+include "Sunshine/vendor/imgui"
 
 project "Sunshine"
 	location "Sunshine"
@@ -35,6 +37,7 @@ project "Sunshine"
 	{
 		"%{prj.name}/src/**.h",
 		"%{prj.name}/src/**.cpp",
+		--"%{IncludeDir.ImGui}/imgui_tables.cpp"
 	}
 	
 	includedirs
@@ -42,13 +45,15 @@ project "Sunshine"
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
 		"%{IncludeDir.GLFW}",
-		"%{IncludeDir.Glad}"
+		"%{IncludeDir.Glad}",
+		"%{IncludeDir.ImGui}"
 	}
 	
 	links
 	{
 		"GLFW",
 		"Glad",
+		"ImGui",
 		"opengl32.lib"
 	}
 	
@@ -61,6 +66,7 @@ project "Sunshine"
 			"SU_PLATFORM_WINDOWS",
 			"SU_BUILD_DLL",
 			"GLFW_INCLUDE_NONE",
+			" IMGUI_IMPL_OPENGL_LOADER_CUSTOM"
 		}
 		
 		postbuildcommands

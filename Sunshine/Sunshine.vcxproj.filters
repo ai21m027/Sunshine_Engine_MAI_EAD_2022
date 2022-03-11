@@ -7,8 +7,14 @@
     <Filter Include="Sunshine\Events">
       <UniqueIdentifier>{9686B79A-0212-255F-0B23-A853772D815F}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Sunshine\ImGui">
+      <UniqueIdentifier>{9CC1403B-888F-3441-7123-A5675D9010A6}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Sunshine\Platform">
       <UniqueIdentifier>{868BD142-F2A1-CFD8-3B19-5BFAA76EA060}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sunshine\Platform\OpenGL">
+      <UniqueIdentifier>{FA411919-E666-6899-0FB2-4D29FB3567B7}</UniqueIdentifier>
     </Filter>
     <Filter Include="Sunshine\Platform\Windows">
       <UniqueIdentifier>{C05B5D94-2C1E-911E-75CE-1FABE1CF69FC}</UniqueIdentifier>
@@ -37,6 +43,9 @@
     <ClInclude Include="src\Sunshine\Events\MouseEvent.h">
       <Filter>Sunshine\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Sunshine\ImGui\ImGuiLayer.h">
+      <Filter>Sunshine\ImGui</Filter>
+    </ClInclude>
     <ClInclude Include="src\Sunshine\Layer.h">
       <Filter>Sunshine</Filter>
     </ClInclude>
@@ -45,6 +54,12 @@
     </ClInclude>
     <ClInclude Include="src\Sunshine\Log.h">
       <Filter>Sunshine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Sunshine\Platform\OpenGL\ImGuiOpenGLRenderer.h">
+      <Filter>Sunshine\Platform\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Sunshine\Platform\OpenGL\imgui_impl_opengl3_loader.h">
+      <Filter>Sunshine\Platform\OpenGL</Filter>
     </ClInclude>
     <ClInclude Include="src\Sunshine\Platform\Windows\WindowsWindow.h">
       <Filter>Sunshine\Platform\Windows</Filter>
@@ -58,6 +73,9 @@
     <ClCompile Include="src\Sunshine\Application.cpp">
       <Filter>Sunshine</Filter>
     </ClCompile>
+    <ClCompile Include="src\Sunshine\ImGui\ImGuiLayer.cpp">
+      <Filter>Sunshine\ImGui</Filter>
+    </ClCompile>
     <ClCompile Include="src\Sunshine\Layer.cpp">
       <Filter>Sunshine</Filter>
     </ClCompile>
@@ -66,6 +84,9 @@
     </ClCompile>
     <ClCompile Include="src\Sunshine\Log.cpp">
       <Filter>Sunshine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Sunshine\Platform\OpenGL\ImGuiOpenGLRenderer.cpp">
+      <Filter>Sunshine\Platform\OpenGL</Filter>
     </ClCompile>
     <ClCompile Include="src\Sunshine\Platform\Windows\WindowsWindow.cpp">
       <Filter>Sunshine\Platform\Windows</Filter>

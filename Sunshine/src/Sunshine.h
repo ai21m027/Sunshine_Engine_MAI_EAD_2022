@@ -7,6 +7,7 @@
 #include "Sunshine/Layer.h"
 #include "Sunshine/Core.h"
 #include "Sunshine/Log.h"
+#include "Sunshine/ImGui/ImGuiLayer.h"
 //#include <stdio.h>
 
 // --- Entry Point ---------------------------------------
