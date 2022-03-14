@@ -59,7 +59,7 @@ project "Sunshine"
 	
 	filter "system:windows"
 		cppdialect "C++17"
-		staticruntime "On"
+		staticruntime "Off"
 		systemversion "latest"
 		
 		defines{
@@ -76,15 +76,15 @@ project "Sunshine"
 	
 	filter "configurations:Debug"
 		defines "SU_DEBUG"
-		buildoptions "/MDd"
+		runtime "Debug"
 		symbols "On"
 	filter "configurations:Release"
 		defines "SU_RELEASE"
-		buildoptions "/MD"
+		runtime "Release"
 		optimize "On"
 	filter "configurations:Dist"
 		defines "SU_DIST"
-		buildoptions "/MD"
+		runtime "Release"
 		optimize "On"
 
 project "Sandbox"
@@ -115,7 +115,7 @@ project "Sandbox"
 	
 	filter "system:windows"
 		cppdialect "C++17"
-		staticruntime "On"
+		staticruntime "Off"
 		systemversion "latest"
 		
 		defines{
@@ -125,15 +125,15 @@ project "Sandbox"
 	
 	filter "configurations:Debug"
 		defines "SU_DEBUG"
-		buildoptions "/MDd"
+		runtime "Debug"
 		symbols "On"
 	filter "configurations:Release"
 		defines "SU_RELEASE"
-		buildoptions "/MD"
+		runtime "Release"
 		optimize "On"
 	filter "configurations:Dist"
 		defines "SU_DIST"
-		buildoptions "/MD"
+		runtime "Release"
 		optimize "On"
 
 

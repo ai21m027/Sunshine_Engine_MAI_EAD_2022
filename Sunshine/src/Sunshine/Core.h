@@ -11,6 +11,10 @@
 	#error Sunshine only supports Windows
 #endif
 
+#ifdef SU_DEBUG
+	#define SU_ENABLE_ASSERTS
+#endif
+
 #ifdef SU_ENABLE_ASSERTS
 	#define SU_ASSERT(x,...) {if(!(x)) {SU_ERROR("Assertion failed: {0}",__VA_ARGS__);__debugbreak();}}
 	#define SU_CORE_ASSERT(x,...) {if(!(x)) {SU_CORE_ERROR("Assertion failed: {0}",__VA_ARGS__);__debugbreak();}}
