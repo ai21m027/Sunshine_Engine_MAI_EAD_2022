@@ -1,6 +1,7 @@
 
 workspace "Sunshine"
 	architecture "x64"
+	startproject "Sandbox"
 	
 	configurations
 	{
@@ -17,9 +18,11 @@ IncludeDir["GLFW"] = "Sunshine/vendor/GLFW/include"
 IncludeDir["Glad"] = "Sunshine/vendor/Glad/include"
 IncludeDir["ImGui"] = "Sunshine/vendor/imgui"
 
-include "Sunshine/vendor/GLFW"
-include "Sunshine/vendor/Glad"
-include "Sunshine/vendor/imgui"
+group "Dependencies"
+		include "Sunshine/vendor/GLFW"
+		include "Sunshine/vendor/Glad"
+		include "Sunshine/vendor/imgui"	
+group ""
 
 project "Sunshine"
 	location "Sunshine"
@@ -71,7 +74,7 @@ project "Sunshine"
 		
 		postbuildcommands
 		{
-			("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Sandbox")
+			("{COPY} %{cfg.buildtarget.relpath} \"../bin/" .. outputdir .. "/Sandbox\"")
 		}
 	
 	filter "configurations:Debug"
@@ -135,7 +138,3 @@ project "Sandbox"
 		defines "SU_DIST"
 		runtime "Release"
 		optimize "On"
-
-
-
-
