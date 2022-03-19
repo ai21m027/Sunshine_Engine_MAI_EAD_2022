@@ -13,7 +13,7 @@ namespace Sunshine {
 		None = 0,
 		WindowClose, WindowResize, WindowFocus, WindowLostFocus, WindowMoved,
 		AppTick, AppUpdate, AppRender,
-		KeyPressed, KeyReleased,
+		KeyPressed, KeyReleased, KeyTyped,
 		MouseButtonPressed, MouseButtonReleased, MouseMoved, MouseScrolled
 	};
 
@@ -46,6 +46,7 @@ namespace Sunshine {
 		{
 			return GetCategoryFlags() & category;
 		}
+		inline bool Handled() { return m_Handled; }
 	protected:
 		bool m_Handled = false;
 

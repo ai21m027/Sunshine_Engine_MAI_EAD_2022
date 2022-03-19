@@ -4,3 +4,6 @@
 [submodule "Sunshine/vendor/GLFW"]
 	path = Sunshine/vendor/GLFW
 	url = https://github.com/TheCherno/GLFW
+[submodule "Sunshine/vendor/imgui"]
+	path = Sunshine/vendor/imgui
+	url = https://github.com/TheCherno/imgui
