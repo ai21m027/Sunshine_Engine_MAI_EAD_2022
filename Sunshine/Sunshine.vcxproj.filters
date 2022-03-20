@@ -68,6 +68,8 @@
       <Filter>Sunshine</Filter>
     </ClInclude>
     <ClInclude Include="src\supch.h" />
+    <ClInclude Include="src\Sunshine\Input.h" />
+    <ClInclude Include="src\Sunshine\Platform\Windows\WindowsInput.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Sunshine\Application.cpp">
@@ -92,5 +94,6 @@
       <Filter>Sunshine\Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\supch.cpp" />
+    <ClCompile Include="src\Sunshine\Platform\Windows\WindowsInput.cpp" />
   </ItemGroup>
 </Project>

@@ -158,11 +158,13 @@
     <ClInclude Include="src\Sunshine\Events\KeyEvent.h" />
     <ClInclude Include="src\Sunshine\Events\MouseEvent.h" />
     <ClInclude Include="src\Sunshine\ImGui\ImGuiLayer.h" />
+    <ClInclude Include="src\Sunshine\Input.h" />
     <ClInclude Include="src\Sunshine\Layer.h" />
     <ClInclude Include="src\Sunshine\LayerStack.h" />
     <ClInclude Include="src\Sunshine\Log.h" />
     <ClInclude Include="src\Sunshine\Platform\OpenGL\ImGuiOpenGLRenderer.h" />
     <ClInclude Include="src\Sunshine\Platform\OpenGL\imgui_impl_opengl3_loader.h" />
+    <ClInclude Include="src\Sunshine\Platform\Windows\WindowsInput.h" />
     <ClInclude Include="src\Sunshine\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\Sunshine\Window.h" />
     <ClInclude Include="src\supch.h" />
@@ -174,6 +176,7 @@
     <ClCompile Include="src\Sunshine\LayerStack.cpp" />
     <ClCompile Include="src\Sunshine\Log.cpp" />
     <ClCompile Include="src\Sunshine\Platform\OpenGL\ImGuiOpenGLRenderer.cpp" />
+    <ClCompile Include="src\Sunshine\Platform\Windows\WindowsInput.cpp" />
     <ClCompile Include="src\Sunshine\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\supch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
