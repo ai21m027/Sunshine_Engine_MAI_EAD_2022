@@ -7,3 +7,6 @@
 [submodule "Sunshine/vendor/imgui"]
 	path = Sunshine/vendor/imgui
 	url = https://github.com/TheCherno/imgui
+[submodule "Sunshine\\vendor\\glm"]
+	path = Sunshine\\vendor\\glm
+	url = https://github.com/g-truc/glm

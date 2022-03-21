@@ -17,6 +17,7 @@ IncludeDir = {}
 IncludeDir["GLFW"] = "Sunshine/vendor/GLFW/include"
 IncludeDir["Glad"] = "Sunshine/vendor/Glad/include"
 IncludeDir["ImGui"] = "Sunshine/vendor/imgui"
+IncludeDir["glm"] = "Sunshine/vendor/glm"
 
 group "Dependencies"
 		include "Sunshine/vendor/GLFW"
@@ -41,6 +42,8 @@ project "Sunshine"
 		"%{prj.name}/src/**.h",
 		"%{prj.name}/src/**.cpp",
 		--"%{IncludeDir.ImGui}/imgui_tables.cpp"
+		"%{prj.name}/vendor/glm/glm/**.hpp",
+		"%{prj.name}/vendor/glm/glm/**.inl"
 	}
 	
 	includedirs
@@ -49,7 +52,8 @@ project "Sunshine"
 		"%{prj.name}/vendor/spdlog/include",
 		"%{IncludeDir.GLFW}",
 		"%{IncludeDir.Glad}",
-		"%{IncludeDir.ImGui}"
+		"%{IncludeDir.ImGui}",
+		"%{IncludeDir.glm}"
 	}
 	
 	links
@@ -108,7 +112,8 @@ project "Sandbox"
 	includedirs
 	{
 		"Sunshine/vendor/spdlog/include",
-		"Sunshine/src"
+		"Sunshine/src",
+		"%{IncludeDir.glm}"
 	}
 	
 	links
