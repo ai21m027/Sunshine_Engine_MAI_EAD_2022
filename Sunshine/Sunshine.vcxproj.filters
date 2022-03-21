@@ -16,9 +16,6 @@
     <Filter Include="src\Sunshine\Platform">
       <UniqueIdentifier>{5DD4DF97-C940-9B92-9234-33F0FE5FBDFA}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src\Sunshine\Platform\OpenGL">
-      <UniqueIdentifier>{F1529061-DD0D-800D-86C5-F857725FCA9D}</UniqueIdentifier>
-    </Filter>
     <Filter Include="src\Sunshine\Platform\Windows">
       <UniqueIdentifier>{978BB6EB-03A4-9D15-CC50-2DAF382832AF}</UniqueIdentifier>
     </Filter>
@@ -89,12 +86,6 @@
     </ClInclude>
     <ClInclude Include="src\Sunshine\MouseButtonCodes.h">
       <Filter>src\Sunshine</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Sunshine\Platform\OpenGL\ImGuiOpenGLRenderer.h">
-      <Filter>src\Sunshine\Platform\OpenGL</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Sunshine\Platform\OpenGL\imgui_impl_opengl3_loader.h">
-      <Filter>src\Sunshine\Platform\OpenGL</Filter>
     </ClInclude>
     <ClInclude Include="src\Sunshine\Platform\Windows\WindowsInput.h">
       <Filter>src\Sunshine\Platform\Windows</Filter>
@@ -1358,6 +1349,9 @@
     <ClCompile Include="src\Sunshine\Application.cpp">
       <Filter>src\Sunshine</Filter>
     </ClCompile>
+    <ClCompile Include="src\Sunshine\ImGui\ImGuiBuild.cpp">
+      <Filter>src\Sunshine\ImGui</Filter>
+    </ClCompile>
     <ClCompile Include="src\Sunshine\ImGui\ImGuiLayer.cpp">
       <Filter>src\Sunshine\ImGui</Filter>
     </ClCompile>
@@ -1369,9 +1363,6 @@
     </ClCompile>
     <ClCompile Include="src\Sunshine\Log.cpp">
       <Filter>src\Sunshine</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Sunshine\Platform\OpenGL\ImGuiOpenGLRenderer.cpp">
-      <Filter>src\Sunshine\Platform\OpenGL</Filter>
     </ClCompile>
     <ClCompile Include="src\Sunshine\Platform\Windows\WindowsInput.cpp">
       <Filter>src\Sunshine\Platform\Windows</Filter>

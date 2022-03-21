@@ -29,7 +29,8 @@ project "Sunshine"
 	location "Sunshine"
 	kind "SharedLib"
 	language "C++"
-	
+	staticruntime "off"
+
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 	
@@ -41,7 +42,7 @@ project "Sunshine"
 	{
 		"%{prj.name}/src/**.h",
 		"%{prj.name}/src/**.cpp",
-		--"%{IncludeDir.ImGui}/imgui_tables.cpp"
+		--"%{IncludeDir.ImGui}/imgui_tables.cpp",
 		"%{prj.name}/vendor/glm/glm/**.hpp",
 		"%{prj.name}/vendor/glm/glm/**.inl"
 	}
@@ -72,8 +73,7 @@ project "Sunshine"
 		defines{
 			"SU_PLATFORM_WINDOWS",
 			"SU_BUILD_DLL",
-			"GLFW_INCLUDE_NONE",
-			" IMGUI_IMPL_OPENGL_LOADER_CUSTOM"
+			"GLFW_INCLUDE_NONE"
 		}
 		
 		postbuildcommands
@@ -113,6 +113,7 @@ project "Sandbox"
 	{
 		"Sunshine/vendor/spdlog/include",
 		"Sunshine/src",
+		"Sunshine/vendor",
 		"%{IncludeDir.glm}"
 	}
 	
