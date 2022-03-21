@@ -70,6 +70,8 @@
     <ClInclude Include="src\supch.h" />
     <ClInclude Include="src\Sunshine\Input.h" />
     <ClInclude Include="src\Sunshine\Platform\Windows\WindowsInput.h" />
+    <ClInclude Include="src\Sunshine\MouseButtonCodes.h" />
+    <ClInclude Include="src\Sunshine\KeyCodes.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Sunshine\Application.cpp">

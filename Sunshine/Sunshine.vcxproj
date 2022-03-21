@@ -159,9 +159,11 @@
     <ClInclude Include="src\Sunshine\Events\MouseEvent.h" />
     <ClInclude Include="src\Sunshine\ImGui\ImGuiLayer.h" />
     <ClInclude Include="src\Sunshine\Input.h" />
+    <ClInclude Include="src\Sunshine\KeyCodes.h" />
     <ClInclude Include="src\Sunshine\Layer.h" />
     <ClInclude Include="src\Sunshine\LayerStack.h" />
     <ClInclude Include="src\Sunshine\Log.h" />
+    <ClInclude Include="src\Sunshine\MouseButtonCodes.h" />
     <ClInclude Include="src\Sunshine\Platform\OpenGL\ImGuiOpenGLRenderer.h" />
     <ClInclude Include="src\Sunshine\Platform\OpenGL\imgui_impl_opengl3_loader.h" />
     <ClInclude Include="src\Sunshine\Platform\Windows\WindowsInput.h" />
