@@ -5,6 +5,7 @@
 #include "Sunshine/LayerStack.h"
 #include "Sunshine/Events/Event.h"
 #include "Sunshine/Events/ApplicationEvent.h"
+#include "Sunshine/ImGui/ImGuiLayer.h"
 
 
 namespace Sunshine {
@@ -28,6 +29,8 @@ namespace Sunshine {
 		bool OnWindowClosed(WindowCloseEvent& e);
 
 		std::unique_ptr<Window> m_Window;
+		ImGuiLayer* m_ImGuiLayer;
+	
 		bool m_Running = true;
 		LayerStack m_LayerStack;
 

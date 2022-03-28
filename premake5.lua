@@ -1,6 +1,7 @@
 
 workspace "Sunshine"
 	architecture "x64"
+	startproject "Sandbox"
 	
 	configurations
 	{
@@ -16,16 +17,20 @@ IncludeDir = {}
 IncludeDir["GLFW"] = "Sunshine/vendor/GLFW/include"
 IncludeDir["Glad"] = "Sunshine/vendor/Glad/include"
 IncludeDir["ImGui"] = "Sunshine/vendor/imgui"
+IncludeDir["glm"] = "Sunshine/vendor/glm"
 
-include "Sunshine/vendor/GLFW"
-include "Sunshine/vendor/Glad"
-include "Sunshine/vendor/imgui"
+group "Dependencies"
+		include "Sunshine/vendor/GLFW"
+		include "Sunshine/vendor/Glad"
+		include "Sunshine/vendor/imgui"	
+group ""
 
 project "Sunshine"
 	location "Sunshine"
 	kind "SharedLib"
 	language "C++"
-	
+	staticruntime "off"
+
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 	
@@ -37,7 +42,9 @@ project "Sunshine"
 	{
 		"%{prj.name}/src/**.h",
 		"%{prj.name}/src/**.cpp",
-		--"%{IncludeDir.ImGui}/imgui_tables.cpp"
+		--"%{IncludeDir.ImGui}/imgui_tables.cpp",
+		"%{prj.name}/vendor/glm/glm/**.hpp",
+		"%{prj.name}/vendor/glm/glm/**.inl"
 	}
 	
 	includedirs
@@ -46,7 +53,8 @@ project "Sunshine"
 		"%{prj.name}/vendor/spdlog/include",
 		"%{IncludeDir.GLFW}",
 		"%{IncludeDir.Glad}",
-		"%{IncludeDir.ImGui}"
+		"%{IncludeDir.ImGui}",
+		"%{IncludeDir.glm}"
 	}
 	
 	links
@@ -65,13 +73,12 @@ project "Sunshine"
 		defines{
 			"SU_PLATFORM_WINDOWS",
 			"SU_BUILD_DLL",
-			"GLFW_INCLUDE_NONE",
-			" IMGUI_IMPL_OPENGL_LOADER_CUSTOM"
+			"GLFW_INCLUDE_NONE"
 		}
 		
 		postbuildcommands
 		{
-			("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Sandbox")
+			("{COPY} %{cfg.buildtarget.relpath} \"../bin/" .. outputdir .. "/Sandbox\"")
 		}
 	
 	filter "configurations:Debug"
@@ -105,7 +112,9 @@ project "Sandbox"
 	includedirs
 	{
 		"Sunshine/vendor/spdlog/include",
-		"Sunshine/src"
+		"Sunshine/src",
+		"Sunshine/vendor",
+		"%{IncludeDir.glm}"
 	}
 	
 	links
@@ -135,7 +144,3 @@ project "Sandbox"
 		defines "SU_DIST"
 		runtime "Release"
 		optimize "On"
-
-
-
-

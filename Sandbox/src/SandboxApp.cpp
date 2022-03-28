@@ -10,12 +10,20 @@ public:
 
 	void OnUpdate() override
 	{
-		SU_INFO("ExampleLayer::Update");
+		//SU_INFO("ExampleLayer::Update");
+
+		if (Sunshine::Input::isKeyPressed(SU_KEY_TAB))
+			SU_TRACE("TAB Key is pressed.");
 	}
 
 	void OnEvent(Sunshine::Event& event) override
 	{
-		SU_TRACE("{0}", event);
+		//SU_TRACE("{0}", event);
+		if (event.GetEventType() == Sunshine::EventType::KeyPressed)
+		{
+			Sunshine::KeyPressedEvent& e = (Sunshine::KeyPressedEvent&)event;
+			SU_TRACE("{0}",(char)e.GetKeyCode());
+		}
 	}
 };
 
@@ -31,7 +39,6 @@ public:
 	Sandbox()
 	{
 		PushLayer(new ExampleLayer());
-		PushOverlay(new Sunshine::ImGuiLayer());
 	}
 	~Sandbox()
 	{
