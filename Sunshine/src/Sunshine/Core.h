@@ -2,11 +2,16 @@
 
 
 #ifdef SU_PLATFORM_WINDOWS
+
+#if SU_DYNAMIC_LINK
 	#ifdef SU_BUILD_DLL
 		#define SUNSHINE_API __declspec(dllexport)
 	#else
 		#define SUNSHINE_API __declspec(dllimport)
 	#endif
+#else 
+	#define SUNSHINE_API
+#endif
 #else
 	#error Sunshine only supports Windows
 #endif

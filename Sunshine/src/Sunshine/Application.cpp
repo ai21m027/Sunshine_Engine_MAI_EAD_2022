@@ -62,7 +62,7 @@ namespace Sunshine {
 		while (m_Running)
 		{
 			//Color the whole screen blue
-			glClearColor(0.2, 0.2, 1, 1);
+			glClearColor(0.2, 0.2, 1.0, 1.0);
 			glClear(GL_COLOR_BUFFER_BIT);
 
 			for (Layer* layer : m_LayerStack)

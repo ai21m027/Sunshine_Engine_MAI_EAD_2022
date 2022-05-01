@@ -1,5 +1,7 @@
 #include <Sunshine.h>
 
+#include "imgui/imgui.h"
+
 class ExampleLayer :public Sunshine::Layer
 {
 public:
@@ -14,6 +16,14 @@ public:
 
 		if (Sunshine::Input::isKeyPressed(SU_KEY_TAB))
 			SU_TRACE("TAB Key is pressed.");
+	}
+
+	virtual void OnImGuiRender() override 
+	{
+		ImGui::Begin("Test");
+		ImGui::Text("Hello World");
+		ImGui::End();
+
 	}
 
 	void OnEvent(Sunshine::Event& event) override
