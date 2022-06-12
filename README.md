@@ -10,3 +10,5 @@ Build Steps:
 
 
 Generate Projects builds a Visual Studio 2019 Solution, if a different version is needed, change the version in GenerateProjects.bat
+
+Current Status: End of Video 27 - Rendering Context
