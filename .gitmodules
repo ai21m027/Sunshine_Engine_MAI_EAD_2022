@@ -3,10 +3,10 @@
 	url = https://github.com/gabime/spdlog
 [submodule "Sunshine/vendor/GLFW"]
 	path = Sunshine/vendor/GLFW
-	url = https://github.com/TheCherno/GLFW
+	url = https://github.com/ai21m027/glfw_engine
 [submodule "Sunshine/vendor/imgui"]
 	path = Sunshine/vendor/imgui
-	url = https://github.com/TheCherno/imgui
+	url = https://github.com/ai21m027/imgui_engine
 [submodule "Sunshine\\vendor\\glm"]
 	path = Sunshine\\vendor\\glm
 	url = https://github.com/g-truc/glm
